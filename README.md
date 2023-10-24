@@ -11,7 +11,7 @@ Campus Recruitment System is a recruiting software built with the following tech
 To get a local copy of the code, clone the repository using Git:
 
 ```shell
-git clone https://github.com/Pragadeesvp/project.git
+git clone <insert repository link>
 cd project
 ```
 
