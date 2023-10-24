@@ -1,4 +1,4 @@
-# Campus Recruitment System
+# Recruitment System
 
 Campus Recruitment System is a recruiting software built with the following technologies:
 
@@ -64,6 +64,6 @@ Here are the available npm scripts for this project:
 
 ## Credits
 
-Campus Recruitment System
+Recruitment System
 
 ---
