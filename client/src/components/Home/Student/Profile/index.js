@@ -36,7 +36,7 @@ const Profile = ({ firstName, lastName, email, address, phone, coverLetter, gend
                 value={lastName}
               />
             </Form.Group>
-            <Form.Group controlId="email" className="mb-3">
+            {/* <Form.Group controlId="email" className="mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control
                 readOnly
@@ -44,8 +44,8 @@ const Profile = ({ firstName, lastName, email, address, phone, coverLetter, gend
                 name="email"
                 value={email}
               />
-            </Form.Group>
-            {/* <Form.Group controlId="address" className="mb-3">
+            </Form.Group> */}
+            <Form.Group controlId="address" className="mb-3">
               <Form.Label>Address</Form.Label>
               <Form.Control
                 readOnly
@@ -53,7 +53,7 @@ const Profile = ({ firstName, lastName, email, address, phone, coverLetter, gend
                 name="address"
                 value={address}
               />
-            </Form.Group> */}
+            </Form.Group>
             <Form.Group controlId="phone" className="mb-3">
               <Form.Label>Phone</Form.Label>
               <Form.Control
