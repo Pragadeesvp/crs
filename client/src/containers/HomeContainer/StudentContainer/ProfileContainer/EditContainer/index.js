@@ -13,6 +13,9 @@ class EditContainer extends Component {
     firstName: this.props.user.firstName,
     lastName: this.props.user.lastName,
     phone: this.props.user.phone,
+    address: this.props.user.address,
+    coverLetter : this.props.user.coverLetter,
+    gender : this.props.user.gender,
     isProcessing: false,
     error: null,
   };
@@ -26,12 +29,15 @@ class EditContainer extends Component {
     this.setState({ isProcessing: true });
 
     const { api, setUser, navigate } = this.props;
-    const { firstName, lastName, phone } = this.state;
+    const { firstName, lastName, phone ,address,coverLetter,gender} = this.state;
 
     const data = {
       firstName,
       lastName,
       phone,
+      address,
+      coverLetter,
+      gender
     };
 
     api
@@ -50,13 +56,16 @@ class EditContainer extends Component {
   dismissAlert = () => this.setState({ error: null });
 
   render() {
-    const { firstName, lastName, phone, isProcessing, error } = this.state;
+    const { firstName, lastName, phone, address,coverLetter,gender,isProcessing, error } = this.state;
 
     return (
       <Edit
         firstName={firstName}
         lastName={lastName}
         phone={phone}
+        address={address} 
+        coverLetter= {coverLetter} 
+        gender={gender}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
         isProcessing={isProcessing}

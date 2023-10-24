@@ -61,7 +61,7 @@ router.patch('/', authorization, (req, res) => {
     phone,
     address,
     gender,
-    coverletter,
+    coverLetter,
   } = req.body;
 
   if (role === ADMIN) {
@@ -79,7 +79,14 @@ router.patch('/', authorization, (req, res) => {
     Student.updateOne(
       { _id },
       {
-        $set: { firstName, lastName, phone, address, gender, coverletter },
+        $set: {
+          firstName,
+          lastName,
+          phone,
+          address, // Set the 'address' field
+          gender, // Set the 'gender' field
+          coverLetter, // Set the 'coverLetter' field
+        }
       }
     )
       .then(success => res.status(200).send(success.nModified))

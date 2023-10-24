@@ -11,7 +11,8 @@ import * as ROUTES from '../../../../constants/routes';
 const Edit = ({
   firstName,
   lastName,
-  email, // Add email
+  email,
+  phone, // Add email
   address, // Add address
   coverLetter, // Add cover letter
   gender, // Add gender
@@ -61,6 +62,17 @@ const Edit = ({
                 disabled={isProcessing}
               />
             </Form.Group>
+            <Form.Group controlId="phone" className="mb-3">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control
+                required
+                type="tel" // Use type "tel" for phone numbers
+                name="phone"
+                value={phone}
+                onChange={handleChange}
+                disabled={isProcessing}
+              />
+            </Form.Group>
             <Form.Group controlId="email" className="mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control
@@ -97,15 +109,12 @@ const Edit = ({
             <Form.Group controlId="gender" className="mb-3">
               <Form.Label>Gender</Form.Label>
               <Form.Control
-                as="select"
+                type="text"
                 name="gender"
                 value={gender}
                 onChange={handleChange}
                 disabled={isProcessing}
               >
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
               </Form.Control>
             </Form.Group>
             <Button
